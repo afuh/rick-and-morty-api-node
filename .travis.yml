@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - stable
+dist: trusty
+install:
+  - npm ci
+scripts:
+  - npm test
