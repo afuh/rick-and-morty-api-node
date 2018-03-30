@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src",
-    "test": "nyc ava --verbose"
+    "test": "nyc ava --verbose",
+    "test:watch": "ava --watch --verbose"
   },
   "author": "Axel Fuhrmann",
   "license": "MIT",
