@@ -1,0 +1,36 @@
+{
+  "name": "rickmortyapi",
+  "version": "0.0.1",
+  "description": "A Rick and Morty API Node wrapper",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src",
+    "test": "nyc ava --verbose"
+  },
+  "author": "Axel Fuhrmann",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.3",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "nodemon": "^1.17.2",
+    "nyc": "^11.6.0",
+    "prettier": "^1.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afuh/rick-and-morty-api-node.git"
+  },
+  "keywords": [
+    "node",
+    "rick and morty"
+  ],
+  "bugs": {
+    "url": "https://github.com/afuh/rick-and-morty-api-node/issues"
+  },
+  "homepage": "https://github.com/afuh/rick-and-morty-api-node#readme"
+}
