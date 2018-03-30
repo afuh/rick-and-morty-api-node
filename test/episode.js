@@ -1,21 +1,6 @@
 const test = require('ava')
 const { getEpisode } = require('../src/index')
 
-test('getEpisode() | Get all episodes', async t => {
-  const res = await getEpisode()
-  const keys = Object.keys(res)
-
-  t.deepEqual(res.results.length, 20)
-  t.deepEqual(keys, ['info', 'results'])
-})
-
-test('getEpisode(1) | Check get by ID', async t => {
-  const res = await getEpisode(1)
-
-  t.is(typeof res === 'object', true)
-  t.is(res.id, 1)
-})
-
 test('getEpisode({name: "Pilot", episode: "S01E01"}) | Check get by object', async t => {
   const res = await getEpisode({ name: 'Pilot', episode: 'S01E01' })
   const keys = Object.keys(res)
@@ -28,12 +13,9 @@ test('getEpisode({name: "Pilot", episode: "S01E01"}) | Check get by object', asy
   })
 })
 
-test('getEpisode(6000) | Check 404', async t => {
-  const res = await getEpisode(6000)
-  t.is(res.status, 404)
-})
+test('getEpisode({page: 2}) | Check pagination', async t => {
+  const res = await getEpisode({ page: 2 })
 
-test('getEpisode("wubba lubba dub dub") | Check throw error', async t => {
-  const error = await t.throws(getEpisode('wubba lubba dub dub'))
-  t.is(error.message, 'As argument use an object, integer or nothing')
+  t.is(res.info.next.includes('page=3'), false)
+  t.is(res.info.prev.includes('page=1'), true)
 })
