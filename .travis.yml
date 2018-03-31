@@ -8,5 +8,3 @@ install:
   - npm ci
 scripts:
   - npm test
-after_success:
-  ./node_modules/coveralls/bin/coveralls.js
