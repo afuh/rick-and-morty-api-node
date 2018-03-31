@@ -37,8 +37,7 @@ All methods return a promise.
 - `getEpisode()`
 - `getLocation()`
 
-All the methods work in the same way. The only exception is the queries that you can pass as ab object to each method.
-
+All the methods work in the same way. The only exception is the queries that you can pass as an object to each method.
 To know more about the schema of each response, please check [here](https://rickandmortyapi.com/documentation/#character-schema)
 
 ### Get by ID
@@ -82,4 +81,4 @@ const moreChars = await getCharacter({ page: 2})
 
 - `getEndpoints()`
 
-This method will response with the available endpoints, you can use it to ping the server status.
+This method will response with the available REST endpoints, you can use it to ping the server status.
