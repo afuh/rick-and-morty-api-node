@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A Rick and Morty API Node wrapper",
   "main": "src/index.js",
+  "engines": {
+    "node": ">= 7.10.1"
+  },
   "scripts": {
     "dev": "nodemon src",
     "test": "nyc ava --verbose",
