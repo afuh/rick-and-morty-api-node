@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "nodemon src",
-    "test": "nyc ava --verbose",
-    "test:watch": "ava --watch --verbose"
+    "test": "ava --verbose",
+    "test:watch": "ava --watch --verbose",
+    "test:cover": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "author": "Axel Fuhrmann",
   "license": "MIT",
