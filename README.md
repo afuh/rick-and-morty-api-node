@@ -3,8 +3,6 @@
 [![npm version](https://badge.fury.io/js/rickmortyapi.svg)](https://badge.fury.io/js/rickmortyapi)
 [![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg)](https://npmjs.org/package/rickmortyapi)
 
-https://img.shields.io/npm/dm/rickmortyapi.svg
-
 # The Rick and Morty API Node client
 
 > Hey, did you ever want to hold a terry fold?,
