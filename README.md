@@ -1,3 +1,10 @@
+[![Build Status](https://travis-ci.org/afuh/rick-and-morty-api-node.svg?branch=master)](https://travis-ci.org/afuh/rick-and-morty-api-node)
+[![Coverage Status](https://coveralls.io/repos/github/afuh/rick-and-morty-api-node/badge.svg?branch=master)](https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=master)
+[![npm version](https://badge.fury.io/js/rickmortyapi.svg)](https://badge.fury.io/js/rickmortyapi)
+[![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg)](https://npmjs.org/package/rickmortyapi)
+
+https://img.shields.io/npm/dm/rickmortyapi.svg
+
 # The Rick and Morty API Node client
 
 > Hey, did you ever want to hold a terry fold?,
