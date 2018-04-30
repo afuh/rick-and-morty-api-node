@@ -39,6 +39,15 @@ const commonTests = (method, name) => {
     t.is(res.id, 1)
   })
 
+  test(`${name}([1,2,3]) | Check get by array`, async t => {
+    const arr = [1,2,3]
+    const res = await method(arr)
+    
+    t.plan(arr.length + 1)
+    t.is(typeof res === 'object' && Array.isArray(res), true)
+    res.forEach(r => t.is(arr.includes(r.id), true))
+  })
+
   test(`${name}(6000) | Check 404`, async t => {
     const res = await method(6000)
     t.is(res.status, 404)
@@ -46,7 +55,7 @@ const commonTests = (method, name) => {
 
   test(`${name}("wubba lubba dub dub") | Check throw error`, async t => {
     const error = await t.throws(getCharacter('wubba lubba dub dub'))
-    t.is(error.message, 'As argument use an object, integer or nothing')
+    t.is(error.message, `As argument use an object, an array, an integer or leave it blank`)
   })
 }
 

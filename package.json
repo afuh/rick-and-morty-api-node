@@ -17,14 +17,13 @@
     "axios": "^0.18.0"
   },
   "devDependencies": {
-    "ava": "^1.0.0-beta.3",
+    "ava": "1.0.0-beta.4",
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "nodemon": "^1.17.2",
-    "nyc": "^11.6.0",
-    "prettier": "^1.11.1"
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.1"
   },
   "repository": {
     "type": "git",

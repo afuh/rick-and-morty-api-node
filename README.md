@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/rickmortyapi.svg)](https://badge.fury.io/js/rickmortyapi)
 [![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg)](https://npmjs.org/package/rickmortyapi)
 
-# The Rick and Morty API Node client
+# The Rick and Morty API JavaScript client
 
 > Hey, did you ever want to hold a terry fold?,
 >  I got one right here, grab my terry flap.
@@ -45,7 +45,13 @@ To know more about the schema of each response, please check [here](https://rick
 const rick = await getCharacter(1)
 const earth = await getLocation(1)
 const episodeOne = await getEpisode(1)
+
+// You can also use an array of IDs.
+const theSmiths = await getCharacter([ 2, 3, 4, 5 ])
+const [ earth, citadel ] = await getLocation([ 1, 3 ])
+const s01 = await getEpisode(Array.from({ length: 11 }, (v, i) => i + 1))
 ```
+
 ### Filter
 Pass an object with the queries.
 To know more about filtering check the [docs](https://rickandmortyapi.com/documentation/#filter-characters).

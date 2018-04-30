@@ -7,7 +7,7 @@ const api = axios.create({
 })
 
 const validate = qry => {
-  if (typeof qry === 'number' && Number.isInteger(qry)) {
+  if (typeof qry === 'number' && Number.isInteger(qry) || Array.isArray(qry)) {
     return `/${qry}`
   }
 
@@ -17,7 +17,7 @@ const validate = qry => {
       .join('&')}`
   }
 
-  throw new Error(`As argument use an object, integer or nothing`)
+  throw new Error(`As argument use an object, an array, an integer or leave it blank`)
 }
 
 const get = async (endpoint = '', opt = {}) => {
