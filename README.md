@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.org/afuh/rick-and-morty-api-node.svg?branch=master)](https://travis-ci.org/afuh/rick-and-morty-api-node)
-[![Coverage Status](https://coveralls.io/repos/github/afuh/rick-and-morty-api-node/badge.svg?branch=master)](https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=master)
-[![npm version](https://badge.fury.io/js/rickmortyapi.svg)](https://badge.fury.io/js/rickmortyapi)
-[![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg)](https://npmjs.org/package/rickmortyapi)
+[![Build Status](https://img.shields.io/travis/afuh/rick-and-morty-api-node.svg?style=flat-square)](https://travis-ci.org/afuh/rick-and-morty-api-node)
+[![Coverage Status](https://img.shields.io/coveralls/github/afuh/rick-and-morty-api-node/master.svg?style=flat-square)](https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=feature%2Fcover)
+[![npm version](https://img.shields.io/npm/v/rickmortyapi.svg?style=flat-square)](https://badge.fury.io/js/rickmortyapi)
+[![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg?style=flat-square)](https://npmjs.org/package/rickmortyapi)
+[![Twitter Follow](https://img.shields.io/twitter/follow/rickandmortyapi.svg?style=flat-square&label=Follow)](https://twitter.com/rickandmortyapi)
+
 
 # The Rick and Morty API JavaScript client
 
