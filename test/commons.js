@@ -54,7 +54,7 @@ const commonTests = (method, name) => {
   })
 
   test(`${name}("wubba lubba dub dub") | Check throw error`, async t => {
-    const error = await t.throws(getCharacter('wubba lubba dub dub'))
+    const error = await t.throwsAsync(getCharacter('wubba lubba dub dub'))
     t.is(error.message, `As argument use an object, an array, an integer or leave it blank`)
   })
 }
