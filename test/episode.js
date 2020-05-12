@@ -16,6 +16,6 @@ test('getEpisode({name: "Pilot", episode: "S01E01"}) | Check get by object', asy
 test('getEpisode({page: 2}) | Check pagination', async t => {
   const res = await getEpisode({ page: 2 })
 
-  t.is(res.info.next.includes('page=3'), false)
+  t.is(res.info.next, null)
   t.is(res.info.prev.includes('page=1'), true)
 })
