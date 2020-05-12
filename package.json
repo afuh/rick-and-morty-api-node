@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "nodemon src",
-    "test": "nyc ava --verbose && nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc ava --verbose && nyc report --reporter=lcov",
     "test:watch": "ava --watch --verbose"
   },
   "author": "Axel Fuhrmann",
@@ -17,11 +17,11 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
-    "ava": "^3.4.0",
-    "coveralls": "^3.0.9",
+    "ava": "^3.8.2",
+    "coveralls": "^3.1.0",
     "eslint": "^5.16.0",
     "nodemon": "^1.19.4",
-    "nyc": "^15.0.0"
+    "nyc": "^15.0.1"
   },
   "repository": {
     "type": "git",
