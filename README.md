@@ -70,7 +70,7 @@ const planets = await getLocation({
   page: 2
 })
 
-const seasonOne = await getEpisodes({
+const seasonOne = await getEpisode({
   episode: 's01'
 })
 ```
