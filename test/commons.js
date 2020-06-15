@@ -8,7 +8,7 @@ const {
 
 const base = 'https://rickandmortyapi.com/api/'
 
-test('getEnpoints()', async t => {
+test('getEndpoints()', async t => {
   t.plan(4)
 
   const res = await getEndpoints()
@@ -18,7 +18,7 @@ test('getEnpoints()', async t => {
   t.deepEqual(keys, ['characters', 'locations', 'episodes'])
 
   keys.forEach(key => {
-    // Enpoints are singular, ex: /api/character
+    // Endpoints are singular, ex: /api/character
     t.deepEqual(res[key], `${base}${key}`.slice(0, -1))
   })
 })
@@ -42,7 +42,7 @@ const commonTests = (method, name) => {
   test(`${name}([1,2,3]) | Check get by array`, async t => {
     const arr = [1,2,3]
     const res = await method(arr)
-    
+
     t.plan(arr.length + 1)
     t.is(typeof res === 'object' && Array.isArray(res), true)
     res.forEach(r => t.is(arr.includes(r.id), true))
