@@ -13,9 +13,7 @@
   },
   "author": "Axel Fuhrmann",
   "license": "MIT",
-  "dependencies": {
-    "axios": "^0.19.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^3.8.2",
     "coveralls": "^3.1.0",

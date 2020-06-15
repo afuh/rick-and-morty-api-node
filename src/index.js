@@ -1,10 +1,4 @@
-const axios = require('axios')
-
-const api = axios.create({
-  method: 'get',
-  baseURL: 'https://rickandmortyapi.com/api/',
-  timeout: 5000
-})
+const { get } = require('./get');
 
 const validate = qry => {
   if (typeof qry === 'number' && Number.isInteger(qry) || Array.isArray(qry)) {
@@ -20,22 +14,21 @@ const validate = qry => {
   throw new Error(`As argument use an object, an array, an integer or leave it blank`)
 }
 
-const get = async (endpoint = '', opt = {}) => {
+const getEndpoint = async (endpoint = '', opt = {}) => {
   const query = validate(opt)
 
   try {
-    const { data } = await api(endpoint + query)
+    const { data } = await get(endpoint + query)
     return data
   } catch (e) {
-    console.log(e.message)
     return {
-      status: e.response.status,
-      error: e.response.data.error
+      status: e.statusCode,
+      error: e.data.error
     }
   }
 }
 
-exports.getEndpoints = () => get()
-exports.getCharacter = (opt = {}) => get('character', opt)
-exports.getLocation = (opt = {}) => get('location', opt)
-exports.getEpisode = (opt = {}) => get('episode', opt)
+exports.getEndpoints = () => getEndpoint()
+exports.getCharacter = (opt = {}) => getEndpoint('character', opt)
+exports.getLocation = (opt = {}) => getEndpoint('location', opt)
+exports.getEpisode = (opt = {}) => getEndpoint('episode', opt)
