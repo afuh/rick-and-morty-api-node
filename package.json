@@ -1,6 +1,6 @@
 {
   "name": "rickmortyapi",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A Rick and Morty API Node wrapper",
   "main": "src/index.js",
   "engines": {
