@@ -4,7 +4,7 @@
   "description": "A Rick and Morty API Node wrapper",
   "main": "src/index.js",
   "engines": {
-    "node": ">= 7.10.1"
+    "node": ">= 10.21.0"
   },
   "scripts": {
     "dev": "nodemon src",
