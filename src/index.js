@@ -1,4 +1,4 @@
-const { get } = require('./get');
+const { get } = require('./get')
 
 const validate = qry => {
   if (typeof qry === 'number' && Number.isInteger(qry) || Array.isArray(qry)) {
@@ -11,7 +11,7 @@ const validate = qry => {
       .join('&')}`
   }
 
-  throw new Error(`As argument use an object, an array, an integer or leave it blank`)
+  throw new Error('As argument use an object, an array, an integer or leave it blank')
 }
 
 const getEndpoint = async (endpoint = '', opt = {}) => {
