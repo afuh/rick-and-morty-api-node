@@ -1,4 +1,4 @@
-[![Tests](https://github.com/afuh/rick-and-morty-api-node/workflows/Tests/badge.svg)]((https://github.com/afuh/rick-and-morty-api-node/actions?query=workflow:Tests))
+[![Tests](https://github.com/afuh/rick-and-morty-api-node/workflows/Tests/badge.svg)](https://github.com/afuh/rick-and-morty-api-node/actions?query=workflow:Tests)
 [![Coverage Status](https://img.shields.io/coveralls/github/afuh/rick-and-morty-api-node/master.svg?style=flat-square)](https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=develop)
 [![npm version](https://img.shields.io/npm/v/rickmortyapi.svg?style=flat-square)](https://badge.fury.io/js/rickmortyapi)
 [![npm downloads](https://img.shields.io/npm/dm/rickmortyapi.svg?style=flat-square)](https://npmjs.org/package/rickmortyapi)
