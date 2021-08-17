@@ -22,6 +22,7 @@ A JavaScript client for retrieving content from [The Rick and Morty API](https:/
   - [Filter](#filter)
   - [Pagination](#pagination)
   - [Get endpoints](#get-endpoints)
+- [Support](#support)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -40,7 +41,8 @@ const plumbus = require('rickmortyapi')
 ```
 
 ## Client Reference
-https://javascript.rickandmortyapi.com
+- [Methods](https://javascript.rickandmortyapi.com/modules/index.html)
+- [Interfaces](https://javascript.rickandmortyapi.com/modules/interfaces.html)
 
 ## Response schema
 The response for each method contains the following structure. 
@@ -110,3 +112,8 @@ const moreCharacters = await getCharacters({ page: 2 })
 
 ### Get endpoints
 `getEndpoints()`: This method will response with the available resouces, you can use it to ping the server status.
+
+## Support
+[Help to maintain The Rick and Morty API's infrastructure](https://rickandmortyapi.com/help-us).
+
+If you want to know more about The Rick and Morty API click [here](https://rickandmortyapi.com/about).
