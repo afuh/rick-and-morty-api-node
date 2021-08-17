@@ -1,10 +1,12 @@
-name: npm-publish
+name: NPM publish
+
 on:
   push:
     branches:
       - master
+
 jobs:
-  publish:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -12,7 +14,9 @@ jobs:
         with:
           node-version: 10
       - run: npm install
-      - run: npm test
+      - run: npm run build
+
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+

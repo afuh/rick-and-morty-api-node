@@ -1,0 +1,29 @@
+
+#
+# Builds the docs and deploys to GitHub pages
+#
+# https://github.com/actions/setup-node
+# Using https://github.com/marketplace/actions/deploy-to-github-pages
+name: Deploy to Github pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run docs
+
+      - name: Deploy docs 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
