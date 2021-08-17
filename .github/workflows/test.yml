@@ -24,8 +24,10 @@ jobs:
     - name: Tests
       run: npm run test:coverage
 
+    - name: Build
+      run: npm run build
+
     - name: Bundle size
-      run: npm run buid
       run: npm run test:size
 
     - name: Coveralls
