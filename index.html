@@ -57,17 +57,13 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<p><a href="https://github.com/afuh/rick-and-morty-api-node/actions?query=workflow:Tests"><img src="https://github.com/afuh/rick-and-morty-api-node/workflows/Tests/badge.svg" alt="Tests"></a>
-					<a href="https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=develop"><img src="https://img.shields.io/coveralls/github/afuh/rick-and-morty-api-node/master.svg?style=flat-square" alt="Coverage Status"></a>
+					<a href="https://coveralls.io/github/afuh/rick-and-morty-api-node?branch=master"><img src="https://img.shields.io/coveralls/github/afuh/rick-and-morty-api-node/master.svg?style=flat-square" alt="Coverage Status"></a>
 					<a href="https://badge.fury.io/js/rickmortyapi"><img src="https://img.shields.io/npm/v/rickmortyapi.svg?style=flat-square" alt="npm version"></a>
 					<a href="https://npmjs.org/package/rickmortyapi"><img src="https://img.shields.io/npm/dm/rickmortyapi.svg?style=flat-square" alt="npm downloads"></a>
 				<a href="https://twitter.com/rickandmortyapi"><img src="https://img.shields.io/twitter/follow/rickandmortyapi.svg?style=flat-square&label=Follow" alt="Twitter Follow"></a></p>
 				<a href="#the-rick-and-morty-api-javascript-client" id="the-rick-and-morty-api-javascript-client" style="color: inherit; text-decoration: none;">
 					<h1>The Rick and Morty API JavaScript client</h1>
 				</a>
-				<blockquote>
-					<p>Hey, did you ever want to hold a terry fold?,
-					I got one right here, grab my terry flap.</p>
-				</blockquote>
 				<p>A JavaScript client for retrieving content from <a href="https://rickandmortyapi.com">The Rick and Morty API</a>.</p>
 				<!-- START doctoc generated TOC please keep comment here to allow auto update -->
 				<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -76,7 +72,7 @@
 					<li><a href="#usage">Usage</a></li>
 					<li><a href="#client-reference">Client Reference</a></li>
 					<li><a href="#response-schema">Response schema</a></li>
-					<li><a href="#method-examples">Method Examples</a><ul>
+					<li><a href="#examples">Examples</a><ul>
 							<li><a href="#get-by-id">Get by Id</a></li>
 							<li><a href="#get-by-ids">Get by Ids</a></li>
 							<li><a href="#get-all">Get all</a></li>
@@ -104,7 +100,7 @@
 				<a href="#client-reference" id="client-reference" style="color: inherit; text-decoration: none;">
 					<h2>Client Reference</h2>
 				</a>
-				<p><a href="https://example.com">https://example.com</a></p>
+				<p><a href="https://javascript.rickandmortyapi.com">https://javascript.rickandmortyapi.com</a></p>
 				<a href="#response-schema" id="response-schema" style="color: inherit; text-decoration: none;">
 					<h2>Response schema</h2>
 				</a>
@@ -148,7 +144,7 @@
 				<a href="#filter" id="filter" style="color: inherit; text-decoration: none;">
 					<h3>Filter</h3>
 				</a>
-				<p>To know more about filtering check the <a href="https://rickandmortyapi.com/documentation/#filter-characters">API documentation</a> or the client <a href="/">reference</a>.</p>
+				<p>To know more about filtering check the <a href="https://rickandmortyapi.com/documentation/#filter-characters">API documentation</a> or the client <a href="https://javascript.rickandmortyapi.com/interfaces/interfaces.CharacterFilter.html">reference</a>.</p>
 				<pre><code class="language-js"><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">aliveRicks</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">await</span><span style="color: #24292E"> </span><span style="color: #6F42C1">getCharacters</span><span style="color: #24292E">({</span>
 <span style="color: #24292E">  name: </span><span style="color: #032F62">&#039;rick&#039;</span><span style="color: #24292E">,</span>
 <span style="color: #24292E">  status: </span><span style="color: #032F62">&#039;alive&#039;</span>
@@ -166,7 +162,7 @@
 				<a href="#pagination" id="pagination" style="color: inherit; text-decoration: none;">
 					<h3>Pagination</h3>
 				</a>
-				<p>In methods that return a paged response (<code>getCharacters</code>, <code>getLocations</code> and <code>getEpisodes</code>), you can use a <a href="https://rickandmortyapi.com/documentation/#info-and-pagination"><code>page</code></a> property to access different pages.</p>
+				<p>In methods that return a paginated response (<code>getCharacters</code>, <code>getLocations</code> and <code>getEpisodes</code>), you can use a <a href="https://rickandmortyapi.com/documentation/#info-and-pagination"><code>page</code></a> property to access different pages.</p>
 				<pre><code class="language-js"><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">moreCharacters</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">await</span><span style="color: #24292E"> </span><span style="color: #6F42C1">getCharacters</span><span style="color: #24292E">({ page: </span><span style="color: #005CC5">2</span><span style="color: #24292E"> })</span>
 </code></pre>
 				<a href="#get-endpoints" id="get-endpoints" style="color: inherit; text-decoration: none;">
