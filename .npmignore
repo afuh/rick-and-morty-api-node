@@ -1,0 +1,12 @@
+node_modules
+coverage
+.vscode
+.eslint*
+.prettierrc
+.github
+jest*
+src
+typedoc*
+docs
+tsconfig*
+.husky

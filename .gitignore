@@ -1,5 +1,7 @@
 node_modules
-.eslintrc
 .nyc_output
 coverage
 .vscode
+dist
+.eslintcache
+docs

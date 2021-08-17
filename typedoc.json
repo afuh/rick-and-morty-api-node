@@ -1,0 +1,7 @@
+{
+  "entryPoints": ["./src/index.ts", "./src/interfaces.ts"],
+  "excludeExternals": true,
+  "hideGenerator": true,
+  "includeVersion": true,
+  "highlightTheme": "github-light"
+}
