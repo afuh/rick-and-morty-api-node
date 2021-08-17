@@ -1,36 +1,64 @@
 {
   "name": "rickmortyapi",
-  "version": "0.3.0",
-  "description": "A Rick and Morty API Node wrapper",
-  "main": "src/index.js",
+  "version": "1.0.0",
+  "author": "Axel Fuhrmann",
+  "description": "The Rick and Morty API JS client",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
-    "node": ">= 10.21.0"
+    "node": ">= 10"
   },
   "scripts": {
-    "dev": "nodemon src",
-    "test": "nyc ava --verbose && nyc report --reporter=lcov",
-    "test:watch": "ava --watch --verbose"
+    "dev": "tsc -p tsconfig.json --watch",
+    "build": "rm -rf dist && tsc -p tsconfig.json --emitDeclarationOnly",
+    "postbuild": "esbuild src/index.ts --platform=node --target=node10 --sourcemap --minify --bundle --outfile=dist/index.js",
+    "lint": "eslint src/. --cache --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:size": "bundlesize",
+    "docs": "typedoc",
+    "docs:watch": "npm run docs -- --watch --preserveWatchOutput",
+    "doctoc": "doctoc README.md",
+    "prepare": "husky install"
   },
-  "author": "Axel Fuhrmann",
-  "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "ava": "^3.8.2",
-    "coveralls": "^3.1.0",
-    "eslint": "^5.16.0",
-    "nodemon": "^1.19.4",
-    "nyc": "^15.0.1"
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "bundlesize": "^0.18.1",
+    "doctoc": "^2.0.1",
+    "esbuild": "^0.12.20",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.4",
+    "typedoc": "^0.21.5",
+    "typescript": "^4.3.5"
   },
+  "bundlesize": [
+    {
+      "path": "./dist/index.js",
+      "maxSize": "2 kB"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afuh/rick-and-morty-api-node.git"
   },
   "keywords": [
     "node",
-    "rick and morty"
+    "rick and morty",
+    "api"
   ],
   "bugs": {
     "url": "https://github.com/afuh/rick-and-morty-api-node/issues"
   },
-  "homepage": "https://github.com/afuh/rick-and-morty-api-node#readme"
+  "homepage": "https://github.com/afuh/rick-and-morty-api-node#readme",
+  "dependencies": {}
 }
