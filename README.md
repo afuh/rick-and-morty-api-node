@@ -99,7 +99,7 @@ const planets = await getLocations({
 })
 
 const seasonOne = await getEpisodes({
-  episode: 's01'
+  code: 's01'
 })
 ```
 
@@ -111,7 +111,7 @@ const moreCharacters = await getCharacters({ page: 2 })
 ```
 
 ### Get endpoints
-`getEndpoints()`: This method will response with the available resouces, you can use it to ping the server status.
+`getEndpoints()`: This method will respond with the available resources, you can use it to ping the server status.
 
 ## Support
 [Help to maintain The Rick and Morty API's infrastructure](https://rickandmortyapi.com/help-us).

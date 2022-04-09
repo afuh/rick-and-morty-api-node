@@ -38,9 +38,9 @@ export interface LocationFilter extends Pick<CharacterFilter, 'name' | 'type' | 
 export interface EpisodeFilter extends Pick<CharacterFilter, 'name' | 'page'> {
   /**
    * Filter by the given episode code.
-   * i.e: `{ episode: "S01E01" }`
+   * i.e: `{ code: "S01E01" }`
    */
-  episode?: string
+  code?: string
 }
 
 export interface Character extends ResourceBase {
@@ -62,7 +62,7 @@ export interface Location extends ResourceBase {
 
 export interface Episode extends ResourceBase {
   air_date: string
-  episode: string
+  code: string
   character: string[]
 }
 

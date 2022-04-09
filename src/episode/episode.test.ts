@@ -17,10 +17,10 @@ describe('getEpisodes', () => {
   })
 
   test('get by filter', async () => {
-    const res = await getEpisodes({ episode: 'S01E01' })
+    const res = await getEpisodes({ code: 'S01E01' })
 
     res.data.results.forEach((item) => {
-      expect(item.episode.includes('S01E01')).toBe(true)
+      expect(item.code.includes('S01E01')).toBe(true)
     })
   })
 
