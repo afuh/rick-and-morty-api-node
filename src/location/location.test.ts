@@ -13,13 +13,13 @@ describe('getLocations', () => {
   test('get all', async () => {
     const res = await getLocations()
 
-    expect(res.data.results.length).toBe(20)
+    expect(res.data.results?.length).toBe(20)
   })
 
   test('get by filter', async () => {
     const res = await getLocations({ dimension: 'C-137' })
 
-    res.data.results.forEach((item) => {
+    res.data.results?.forEach((item) => {
       expect(item.dimension.includes('C-137')).toBe(true)
     })
   })
@@ -27,7 +27,7 @@ describe('getLocations', () => {
   test('pagination', async () => {
     const res = await getLocations({ page: 2 })
 
-    expect(res.data.info.prev.includes('page=1')).toBe(true)
+    expect(res.data.info?.prev?.includes('page=1')).toBe(true)
   })
 })
 
@@ -40,13 +40,7 @@ describe('getLocation', () => {
 
   test('get by IDs', async () => {
     const res = await getLocation([1, 2])
-
-    expect(res.data.map(({ id }: { id: number }) => id)).toStrictEqual([1, 2])
-  })
-
-  test('empty array', async () => {
-    const res = await getLocation([])
-
-    expect(res.data).toStrictEqual([])
+    expect(res.data[0].id).toBe(1)
+    expect(res.data[1].id).toBe(2)
   })
 })

@@ -1,3 +1,9 @@
+## 2.0.0
+
+### Breaking Changes
+- Only Node 18 is supported.
+- Use `fetch` API ([experimental](https://nodejs.org/en/blog/announcements/v18-release-announce/#fetch-experimental) in Node 18) instead of the `https` module. This makes it easier to use in applications running Webpack 5.
+
 ## 1.0.0 
 
 ### New Features
