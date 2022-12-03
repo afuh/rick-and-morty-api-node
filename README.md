@@ -28,6 +28,8 @@ A JavaScript client for retrieving content from [The Rick and Morty API](https:/
 
 
 ## Installation
+*Node 18 or above is required.*
+
 `npm i rickmortyapi` or `yarn add rickmortyapi`
 
 ## Usage
