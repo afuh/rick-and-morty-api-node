@@ -1,3 +1,7 @@
+## 2.0.1
+
+- remove unused package [ff8673f](https://github.com/afuh/rick-and-morty-api-node/commit/ff8673f5f9359a30154950f72425ace9e1102dff)
+
 ## 2.0.0
 
 ### Breaking Changes
