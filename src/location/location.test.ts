@@ -1,46 +1,40 @@
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import { getLocation, getLocations } from '.'
 
-describe('getLocations', () => {
-  test('response schema', async () => {
-    const res = await getLocations()
+test('response schema', async () => {
+  const res = await getLocations()
 
-    expect(res.status).toBeTruthy()
-    expect(res.statusMessage).toBeTruthy()
-    expect(res.data.info).toBeTruthy()
-    expect(res.data.results).toBeTruthy()
-  })
+  assert.ok(res.status)
+  assert.ok(res.statusMessage)
+  assert.ok(res.data.info)
+  assert.ok(res.data.results)
 
-  test('get all', async () => {
-    const res = await getLocations()
+  assert.equal(res.data.results?.length, 20)
+})
 
-    expect(res.data.results?.length).toBe(20)
-  })
+test('get by filter', async () => {
+  const res = await getLocations({ dimension: 'C-137' })
 
-  test('get by filter', async () => {
-    const res = await getLocations({ dimension: 'C-137' })
-
-    res.data.results?.forEach((item) => {
-      expect(item.dimension.includes('C-137')).toBe(true)
-    })
-  })
-
-  test('pagination', async () => {
-    const res = await getLocations({ page: 2 })
-
-    expect(res.data.info?.prev?.includes('page=1')).toBe(true)
+  res.data.results?.forEach((item) => {
+    assert.ok(item.dimension.includes('C-137'))
   })
 })
 
-describe('getLocation', () => {
-  test('get by ID', async () => {
-    const res = await getLocation(1)
+test('pagination', async () => {
+  const res = await getLocations({ page: 2 })
 
-    expect(res.data.id).toBe(1)
-  })
+  assert.ok(res.data.info?.prev?.includes('page=1'))
+})
 
-  test('get by IDs', async () => {
-    const res = await getLocation([1, 2])
-    expect(res.data[0].id).toBe(1)
-    expect(res.data[1].id).toBe(2)
-  })
+test('get by ID', async () => {
+  const res = await getLocation(1)
+
+  assert.equal(res.data.id, 1)
+})
+
+test('get by IDs', async () => {
+  const res = await getLocation([1, 10])
+  assert.equal(res.data[0].id, 1)
+  assert.equal(res.data[1].id, 10)
 })

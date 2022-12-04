@@ -22,15 +22,10 @@ jobs:
     - run: npm ci
 
     - name: Tests
-      run: npm run test:coverage
+      run: npm run test
 
     - name: Build
       run: npm run build
 
     - name: Bundle size
       run: npm run test:size
-
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
