@@ -7,6 +7,7 @@ describe('generateQueryString', () => {
   test('Id or Ids', () => {
     const isIdRequired = true
     expect(generateQueryString(1, isIdRequired)).toBe('/1')
+    expect(generateQueryString([], isIdRequired)).toBe('/[0]')
     expect(generateQueryString([1, 2, 3], isIdRequired)).toBe('/1,2,3')
   })
 

@@ -7,7 +7,7 @@ export const errorMessage = {
 
 const isInteger = (val: unknown) => typeof val === 'number' && Number.isInteger(val)
 
-export const isArrayOfIntegers = (val: unknown): boolean => Array.isArray(val) && val.every((item) => isInteger(item))
+export const isArrayOfIntegers = (val: unknown): boolean => Array.isArray(val) && val.every(isInteger)
 
 const generateQueryString = (query: GetResource['options'], isIdRequired?: boolean): string => {
   if (isIdRequired && isInteger(query)) {
@@ -18,10 +18,10 @@ const generateQueryString = (query: GetResource['options'], isIdRequired?: boole
     const arrayOfIds = query as number[]
 
     /**
-     * [-1] forces the API to return an empty array.
+     * [0] forces the API to return an empty array.
      * This should be addressed in the next API codebase update.
      */
-    return `/${arrayOfIds.length ? arrayOfIds : '[-1]'}`
+    return `/${arrayOfIds.length ? arrayOfIds : '[0]'}`
   }
 
   if (!isIdRequired && typeof query === 'object' && !Array.isArray(query)) {
