@@ -6,7 +6,7 @@
 
 
 # The Rick and Morty API JavaScript client
-A JavaScript client for retrieving content from [The Rick and Morty API](https://rickandmortyapi.com).
+A zero dependency client for retrieving content from [The Rick and Morty API](https://rickandmortyapi.com).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
