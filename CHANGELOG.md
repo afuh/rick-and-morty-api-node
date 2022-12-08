@@ -1,3 +1,8 @@
+## 2.1.1
+
+### Bug Fixes
+- episode type [67085dc](https://github.com/afuh/rick-and-morty-api-node/commit/67085dc17943b7bd1bd59209d30ddc67c5c9df47)
+
 ## 2.0.1
 
 - remove unused package [ff8673f](https://github.com/afuh/rick-and-morty-api-node/commit/ff8673f5f9359a30154950f72425ace9e1102dff)

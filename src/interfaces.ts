@@ -63,7 +63,7 @@ export interface Location extends ResourceBase {
 export interface Episode extends ResourceBase {
   air_date: string
   episode: string
-  character: string[]
+  characters: string[]
 }
 
 export interface ApiResponse<T> {
