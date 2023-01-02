@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.2.0](https://github.com/afuh/rick-and-morty-api-node/compare/v0.2.2...v2.2.0) (2023-01-02)
+
+
+### Bug Fixes
+
+* location residents type ([0b80dd3](https://github.com/afuh/rick-and-morty-api-node/commit/0b80dd3a0cdf5da06ba3e65c6d2f73b96d67c03b))
+
 ## 2.1.1
 
 ### Bug Fixes
