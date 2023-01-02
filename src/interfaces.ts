@@ -57,7 +57,7 @@ export interface Character extends ResourceBase {
 export interface Location extends ResourceBase {
   type: string
   dimension: string
-  residents: Character[]
+  residents: string[]
 }
 
 export interface Episode extends ResourceBase {
