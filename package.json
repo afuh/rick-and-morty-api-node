@@ -1,6 +1,6 @@
 {
   "name": "rickmortyapi",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": "Axel Fuhrmann",
   "description": "The Rick and Morty API JS client",
   "license": "MIT",
