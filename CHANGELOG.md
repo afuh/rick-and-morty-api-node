@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/afuh/rick-and-morty-api-node/compare/v0.2.2...v2.3.0) (2023-01-15)
+
+
+### Features
+
+* re-export interfaces ([50730f5](https://github.com/afuh/rick-and-morty-api-node/pull/32/commits/50730f54feb2898c4ff59760bdd2c8ca370d3398))
+
 ## [2.2.0](https://github.com/afuh/rick-and-morty-api-node/compare/v0.2.2...v2.2.0) (2023-01-02)
 
 
