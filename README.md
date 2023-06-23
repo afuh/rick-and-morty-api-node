@@ -51,13 +51,13 @@ The response for each method contains the following structure.
 
 ```js
 {
-  // The HTTP status code from the API response
+  // The response that was provided by the API
   data: {},
-
-  // The HTTP status message from the API response
+  
+  // The HTTP status code from the API response
   status: 200,
 
-  // The response that was provided by the API
+  // The HTTP status message from the API response
   statusMessage: 'OK',
 }
 ```
