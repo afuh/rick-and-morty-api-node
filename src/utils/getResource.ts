@@ -12,7 +12,7 @@ export interface GetResource {
 const getResource = async ({ endpoint, options, isIdRequired = false }: GetResource): Promise<any> => {
   const qs = generateQueryString(options, isIdRequired)
 
-  return get(`${endpoint}/${qs}`)
+  return get(`${endpoint}${qs}`)
 }
 
 export default getResource
